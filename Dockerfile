@@ -12,7 +12,7 @@ RUN npm run build --prod
 FROM nginx:1.19-alpine
 
 RUN rm -rf /usr/share/nginx/html/*
-COPY --from=builder /usr/src/app/dist/eoea /usr/share/nginx/html
+COPY --from=builder /usr/src/app/dist /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
