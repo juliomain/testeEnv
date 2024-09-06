@@ -1,8 +1,6 @@
-version: "3.4"
-
 services:
   teste:
-    image: juliomain/testeEnv:${TAG:-latest}
+    image: juliomain/testeenv:${TAG:-latest}
     env_file: ".env"
     build: 
       context: .
